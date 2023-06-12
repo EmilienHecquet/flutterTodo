@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:tasks_app/app/core/utils/extentions.dart';
 import 'package:tasks_app/app/core/values/colors.dart';
 import 'package:tasks_app/app/data/models/task.dart';
