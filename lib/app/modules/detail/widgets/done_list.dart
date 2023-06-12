@@ -20,7 +20,7 @@ class DoneList extends StatelessWidget {
                   padding: EdgeInsets.symmetric(
                       horizontal: 6.0.wp, vertical: 3.0.wp),
                   child: Text(
-                    "Completed (${homeCtr.doneTodos.length})",
+                    "Complétée(s) (${homeCtr.doneTodos.length})",
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 14.0.sp,

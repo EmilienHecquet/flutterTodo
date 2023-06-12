@@ -34,17 +34,18 @@ class AddDialog extends StatelessWidget {
                       onPressed: () {
                         if (homeCtr.formKey.currentState!.validate()) {
                           if (homeCtr.task.value == null) {
-                            EasyLoading.showError("Please select task type.");
+                            EasyLoading.showError(
+                                "Veuillez votre type de tâche.");
                           } else {
                             var success = homeCtr.updateTask(
                               homeCtr.task.value!,
                               homeCtr.editCtrl.text,
                             );
                             if (success) {
-                              EasyLoading.showSuccess("Add Todo item success");
+                              EasyLoading.showSuccess(
+                                  "Ajout de la tâche avec succès.");
                             } else {
-                              EasyLoading.showError(
-                                  "Todo item is already exist.");
+                              EasyLoading.showError("Cette tâche existe déjà.");
                             }
                           }
                           homeCtr.editCtrl.clear();
@@ -56,7 +57,7 @@ class AddDialog extends StatelessWidget {
                             MaterialStatePropertyAll(Colors.transparent),
                       ),
                       child: Text(
-                        "Done",
+                        "Fait",
                         style: TextStyle(fontSize: 14.0.sp),
                       ),
                     )
@@ -66,7 +67,7 @@ class AddDialog extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5.0.wp),
                 child: Text(
-                  "New Task",
+                  "Nouvelle tâche",
                   style: TextStyle(
                     fontSize: 20.0.sp,
                     fontWeight: FontWeight.bold,
@@ -87,7 +88,7 @@ class AddDialog extends StatelessWidget {
                   autofocus: true,
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
-                      return 'Please enter your task here.';
+                      return 'Veulliez entrer votre tâche ici.';
                     }
                     return null;
                   },
@@ -97,7 +98,7 @@ class AddDialog extends StatelessWidget {
                 padding: EdgeInsets.only(
                     top: 5.0.wp, left: 5.0.wp, right: 5.0.wp, bottom: 2.0.wp),
                 child: Text(
-                  "Add todo",
+                  "Ajouter une tâche",
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 14.0.sp,

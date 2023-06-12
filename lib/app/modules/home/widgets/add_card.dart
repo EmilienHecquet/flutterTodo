@@ -26,7 +26,7 @@ class AddCard extends StatelessWidget {
           await Get.defaultDialog(
             titlePadding: EdgeInsets.symmetric(vertical: 5.0.wp),
             radius: 5,
-            title: "Task Type",
+            title: "Type de tâche",
             content: Form(
               key: homeCtrl.formKey,
               child: Column(
@@ -37,11 +37,11 @@ class AddCard extends StatelessWidget {
                       controller: homeCtrl.editCtrl,
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: 'Title',
+                        labelText: 'Titre',
                       ),
                       validator: (value) {
                         if (value == null || value.trim().isEmpty) {
-                          return 'Please enter your task.';
+                          return 'Veuillez entrez votre tâche';
                         }
                         return null;
                       },
@@ -92,11 +92,11 @@ class AddCard extends StatelessWidget {
                         );
                         Get.back();
                         homeCtrl.addTask(task)
-                            ? EasyLoading.showSuccess("Create success")
-                            : EasyLoading.showError("Task duplicated");
+                            ? EasyLoading.showSuccess("Créer avec succès")
+                            : EasyLoading.showError("Tâche dupliqué");
                       }
                     },
-                    child: const Text("Confirm"),
+                    child: const Text("Confirmer"),
                   ),
                 ],
               ),

@@ -28,7 +28,7 @@ class HomePage extends GetView<HomeController> {
                   Padding(
                     padding: EdgeInsets.all(4.0.wp),
                     child: Text(
-                      "My Lists",
+                      "Mes listes",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 24.0.sp,
@@ -78,7 +78,7 @@ class HomePage extends GetView<HomeController> {
                       transition: Transition.downToUp,
                     );
                   } else {
-                    EasyLoading.showInfo("Please create your task type");
+                    EasyLoading.showInfo("Créer votre type de tâche");
                   }
                 },
                 backgroundColor: controller.deleting.value ? Colors.red : blue,
@@ -90,7 +90,7 @@ class HomePage extends GetView<HomeController> {
           },
           onAccept: (data) {
             controller.deleteTask(data);
-            EasyLoading.showSuccess("Delete success");
+            EasyLoading.showSuccess("Supprimé avec succès");
           },
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -121,7 +121,7 @@ class HomePage extends GetView<HomeController> {
                   ),
                 ),
                 BottomNavigationBarItem(
-                  label: 'Report',
+                  label: 'Rapport',
                   icon: Padding(
                     padding: EdgeInsets.only(left: 15.0.wp),
                     child: const Icon(Icons.data_usage),

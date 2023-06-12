@@ -72,7 +72,7 @@ class DetailPage extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        "$totalTasks Task",
+                        "$totalTasks tâches",
                         style: TextStyle(color: Colors.grey, fontSize: 12.0.sp),
                       ),
                       SizedBox(
@@ -114,7 +114,7 @@ class DetailPage extends StatelessWidget {
                   autofocus: true,
                   validator: (value) {
                     if (value!.isEmpty || value.trim().isEmpty) {
-                      return 'Please enter your todo item.';
+                      return 'Veuillez entrer votre tâche ici.';
                     }
                     return null;
                   },
@@ -131,9 +131,10 @@ class DetailPage extends StatelessWidget {
                         if (homeCtr.formKey.currentState!.validate()) {
                           var success = homeCtr.addTodo(homeCtr.editCtrl.text);
                           if (success) {
-                            EasyLoading.showSuccess("Todo item add success");
+                            EasyLoading.showSuccess(
+                                "Ajout de la tâche avec succès");
                           } else {
-                            EasyLoading.showError('Todo item is already exist');
+                            EasyLoading.showError('La tâche exist déjà.');
                           }
                           homeCtr.editCtrl.clear();
                         }
